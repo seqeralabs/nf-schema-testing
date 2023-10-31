@@ -29,18 +29,21 @@
                     "type": "string",
                     "pattern": "^\\S+\\.png$",
                     "format": "file-path",
-                    "mimetype": "image/png"
+                    "mimetype": "image/png",
+                    "description": "This input accepts .png images only"
                 },
                 "input3": {
                     "type": "string",
                     "pattern": "^\\S+\\.json$",
-                    "format": "path"
+                    "format": "path",
+                    "description": "This input accepts .json files only"
                 },
                 "input4": {
                     "type": "string",
                     "pattern": "^\\S+\\.ya?ml$",
                     "format": "file-path",
-                    "mimetype": "text/plain"
+                    "mimetype": "text/plain",
+                    "description": "This input accepts .yaml/.yml files only"
                 },
                 "outdir": {
                     "type": "string",
