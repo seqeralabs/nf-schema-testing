@@ -4,7 +4,7 @@
     "title": "nf-core/test pipeline parameters",
     "description": "testing",
     "type": "object",
-    "defs": {
+    "$defs": {
         "input_output_options": {
             "title": "Input/output options",
             "type": "object",
