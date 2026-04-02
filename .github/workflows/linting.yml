@@ -14,9 +14,9 @@ jobs:
   EditorConfig:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3
 
       - name: Install editorconfig-checker
         run: npm install -g editorconfig-checker
@@ -27,9 +27,9 @@ jobs:
   Prettier:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3
 
       - name: Install Prettier
         run: npm install -g prettier
@@ -40,15 +40,15 @@ jobs:
   PythonBlack:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
       - name: Check code lints with Black
-        uses: psf/black@stable
+        uses: psf/black@35ea67920b7f6ac8e09be1c47278752b1e827f76 # stable
 
       # If the above check failed, post a comment on the PR explaining the failure
       - name: Post PR comment
         if: failure()
-        uses: mshick/add-pr-comment@v1
+        uses: mshick/add-pr-comment@a96c578acba98b60f16c6866d5f20478dc4ef68b # v1
         with:
           message: |
             ## Python linting (`black`) is failing
@@ -71,12 +71,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out pipeline code
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
       - name: Install Nextflow
-        uses: nf-core/setup-nextflow@v1
+        uses: nf-core/setup-nextflow@b9f764e8ba5c76b712ace14ecbfcef0e40ae2dd8 # v1
 
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@7f4fc3e22c37d6ff65e88745f38bd3157c663f7c # v4
         with:
           python-version: "3.11"
           architecture: "x64"
@@ -99,7 +99,7 @@ jobs:
 
       - name: Upload linting log file artifact
         if: ${{ always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@ff15f0306b3f739f7b6fd43fb5d26cd321bd4de5 # v3
         with:
           name: linting-logs
           path: |
