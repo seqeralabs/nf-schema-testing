@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
       - name: Check code lints with Black
-        uses: psf/black@35ea67920b7f6ac8e09be1c47278752b1e827f76 # stable
+        uses: psf/black@87928e6d6761a4a6d22250e1fee5601b3998086e # stable
 
       # If the above check failed, post a comment on the PR explaining the failure
       - name: Post PR comment
